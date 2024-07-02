@@ -31,4 +31,7 @@ return {
 
 	--INFO: INDENT
 	{ import = "astrocommunity.indent.indent-rainbowline" },
+	--INFO: MEDIA
+	{ import = "astrocommunity.media.presence-nvim" },
+	-- { import = "astrocommunity.media.pets-nvim" },
 }
