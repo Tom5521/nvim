@@ -1,11 +1,3 @@
---if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
--- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
--- Configuration documentation can be found with `:h astrocore`
--- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
---       as this provides autocomplete and documentation while editing
-
----@type LazySpec
 return {
 	"AstroNvim/astrocore",
 	---@type AstroCoreOpts
@@ -47,6 +39,19 @@ return {
 			n = {
 				-- second key is the lefthand side of the map
 
+				["<F6>"] = {
+					function()
+						vim.cmd("CompilerToggleResults")
+					end,
+					desc = "Toggle compiler results",
+				},
+				["<Leader><F6>"] = {
+					function()
+						vim.cmd("CompilerOpen")
+					end,
+					desc = "Open Compiler",
+				},
+
 				-- navigate buffer tabs with `H` and `L`
 				L = {
 					function()
@@ -61,7 +66,7 @@ return {
 					desc = "Previous buffer",
 				},
 
-				-- mappings seen under group name "Buffer"
+				["<Leader>b"] = { desc = "Buffers" },
 				["<Leader>bD"] = {
 					function()
 						require("astroui.status.heirline").buffer_picker(function(bufnr)
@@ -70,15 +75,6 @@ return {
 					end,
 					desc = "Pick to close",
 				},
-				-- tables with just a `desc` key will be registered with which-key if it's installed
-				-- this is useful for naming menus
-				["<Leader>b"] = { desc = "Buffers" },
-				-- quick save
-				-- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-			},
-			t = {
-				-- setting a mapping to false will disable it
-				-- ["<esc>"] = false,
 			},
 		},
 	},

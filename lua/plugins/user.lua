@@ -1,10 +1,5 @@
--- You can also add or configure plugins by creating files in this `plugins/` folder
--- Here are some examples:
-
 ---@type LazySpec
 return {
-
-	-- customize alpha options
 	{
 		"goolord/alpha-nvim",
 		opts = function(_, opts)
@@ -28,10 +23,6 @@ return {
 		end,
 	},
 	{
-		"wakatime/vim-wakatime",
-		lazy = false,
-	},
-	{
 		"jasonccox/vim-wayland-clipboard",
 		lazy = false,
 	},
@@ -40,7 +31,7 @@ return {
 		config = function()
 			require("monokai-pro").setup({
 				transparent_background = false,
-				filter = "ristretto",
+				filter = "spectrum",
 				devicons = true,
 				styles = {
 					comment = { italic = true },
