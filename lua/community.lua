@@ -37,7 +37,7 @@ return {
 
 	--INFO: BARS AND LINES
 	{ import = "astrocommunity.bars-and-lines.dropbar-nvim" },
-	{ import = "astrocommunity.bars-and-lines.bufferline-nvim" },
+	-- { import = "astrocommunity.bars-and-lines.bufferline-nvim" },
 	--INFO: RECIPES
 	{ import = "astrocommunity.recipes.telescope-nvchad-theme" },
 }
