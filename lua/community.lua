@@ -33,4 +33,10 @@ return {
 	{ import = "astrocommunity.indent.indent-rainbowline" },
 	--INFO: MEDIA
 	{ import = "astrocommunity.media.presence-nvim" },
+	--INFO: LSP
+	{ import = "astrocommunity.lsp.lsp-signature-nvim" },
+
+	--INFO: BARS AND LINES
+	{ import = "astrocommunity.bars-and-lines.dropbar-nvim" },
+	{ import = "astrocommunity.bars-and-lines.bufferline-nvim" },
 }
