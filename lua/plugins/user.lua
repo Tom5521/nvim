@@ -35,8 +35,8 @@ return {
 				devicons = true,
 				styles = {
 					comment = { italic = true },
-					keyword = { italic = true }, -- any other keyword
-					type = { italic = true }, -- (preferred) int, long, char, etc
+					keyword = { italic = true },  -- any other keyword
+					type = { italic = true },     -- (preferred) int, long, char, etc
 					storageclass = { italic = true }, -- static, register, volatile, etc
 					structure = { italic = true }, -- struct, union, enum, etc
 					parameter = { italic = true }, -- parameter pass in function
@@ -49,5 +49,14 @@ return {
 	{
 		"EddyBer16/pseint.vim",
 		ft = { "pseint" },
+	},
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		build = "cd app && npm install",
+		init = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
 	},
 }
