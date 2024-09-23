@@ -35,11 +35,11 @@ return {
 				devicons = true,
 				styles = {
 					comment = { italic = true },
-					keyword = { italic = true },  -- any other keyword
-					type = { italic = true },     -- (preferred) int, long, char, etc
+					keyword = { italic = true },      -- any other keyword
+					type = { italic = true, bold = true }, -- (preferred) int, long, char, etc
 					storageclass = { italic = true }, -- static, register, volatile, etc
-					structure = { italic = true }, -- struct, union, enum, etc
-					parameter = { italic = true }, -- parameter pass in function
+					structure = { italic = true },    -- struct, union, enum, etc
+					parameter = { italic = true },    -- parameter pass in function
 					annotation = { italic = true },
 					tag_attribute = { italic = true }, -- attribute of tag in reactjs
 				},
@@ -58,5 +58,13 @@ return {
 			vim.g.mkdp_filetypes = { "markdown" }
 		end,
 		ft = { "markdown" },
+	},
+	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		opts = {
+			autochdir = true,
+			direction = "float",
+		},
 	},
 }
