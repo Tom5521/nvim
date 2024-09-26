@@ -1,4 +1,4 @@
-local function setup_cmp_source(source_name, filetype, additional_config)
+local function setup_cmp_source(source_name, additional_config)
 	local cmp = require("cmp")
 
 	local config = cmp.get_config()
@@ -25,7 +25,7 @@ return {
 		"Snikimonkd/cmp-go-pkgs",
 		ft = "go",
 		config = function()
-			setup_cmp_source("go_pkgs", "go", {
+			setup_cmp_source("go_pkgs", {
 				matching = { disallow_symbol_nonprefix_matching = false },
 			})
 		end,
