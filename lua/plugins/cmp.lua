@@ -18,7 +18,7 @@ return {
 		"mtoohey31/cmp-fish",
 		ft = "fish",
 		config = function()
-			setup_cmp_source("fish", "fish")
+			setup_cmp_source("fish")
 		end,
 	},
 	{
