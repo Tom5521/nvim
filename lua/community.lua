@@ -15,6 +15,7 @@ return {
 	{ import = "astrocommunity.pack.yaml" },
 	{ import = "astrocommunity.pack.bash" },
 	{ import = "astrocommunity.pack.sql" },
+	{ import = "astrocommunity.pack.java" },
 
 	--INFO: COLORSHEMES
 	{ import = "astrocommunity.colorscheme.monokai-pro-nvim" },
