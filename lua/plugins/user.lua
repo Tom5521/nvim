@@ -25,11 +25,11 @@ return {
 			devicons = true,
 			styles = {
 				comment = { italic = true },
-				keyword = { italic = true },       -- any other keyword
+				keyword = { italic = true }, -- any other keyword
 				type = { italic = true, bold = true }, -- (preferred) int, long, char, etc
-				storageclass = { italic = true },  -- static, register, volatile, etc
-				structure = { italic = true },     -- struct, union, enum, etc
-				parameter = { italic = true },     -- parameter pass in function
+				storageclass = { italic = true }, -- static, register, volatile, etc
+				structure = { italic = true }, -- struct, union, enum, etc
+				parameter = { italic = true }, -- parameter pass in function
 				annotation = { italic = true },
 				tag_attribute = { italic = true }, -- attribute of tag in reactjs
 			},
@@ -39,15 +39,15 @@ return {
 		"EddyBer16/pseint.vim",
 		ft = { "pseint" },
 	},
-	{
-		"iamcco/markdown-preview.nvim",
-		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-		build = "cd app && npm install",
-		init = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
-	},
+	-- {
+	-- 	"iamcco/markdown-preview.nvim",
+	-- 	cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+	-- 	build = "cd app && npm install",
+	-- 	init = function()
+	-- 		vim.g.mkdp_filetypes = { "markdown" }
+	-- 	end,
+	-- 	ft = { "markdown" },
+	-- },
 	{
 		"akinsho/toggleterm.nvim",
 		version = "*",

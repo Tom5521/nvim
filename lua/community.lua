@@ -4,6 +4,8 @@ return {
 
 	-- INFO: LAUNGUAGE PACKS
 	{ import = "astrocommunity.pack.lua" },
+	{ import = "astrocommunity.pack.lua" },
+	{ import = "astrocommunity.pack.cpp" },
 	{ import = "astrocommunity.pack.go" },
 	{ import = "astrocommunity.pack.hyprlang" },
 	{ import = "astrocommunity.pack.html-css" },
