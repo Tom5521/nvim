@@ -40,6 +40,10 @@ return {
 		ft = { "pseint" },
 	},
 	-- {
+	-- 	"sphamba/smear-cursor.nvim",
+	-- 	opts = {},
+	-- },
+	-- {
 	-- 	"iamcco/markdown-preview.nvim",
 	-- 	cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
 	-- 	build = "cd app && npm install",
