@@ -12,7 +12,7 @@ if vim.g.neovide then
 	vim.g.neovide_remember_window_size = true
 	vim.g.neovide_cursor_smooth_blink = true
 	vim.g.neovide_cursor_vfx_mode = "railgun"
-	vim.g.neovide_hide_mouse_when_typing = false
-	vim.g.neovide_cursor_trail_size = 0.9
+	vim.g.neovide_hide_mouse_when_typing = true
+	vim.g.neovide_cursor_trail_size = 0.8
 	vim.g.neovide_cursor_vfx_particle_density = 9.0
 end
