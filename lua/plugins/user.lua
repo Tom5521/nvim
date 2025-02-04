@@ -1,4 +1,3 @@
----@type LazySpec
 return {
 	{
 		"goolord/alpha-nvim",
@@ -53,6 +52,5 @@ return {
 		"sphamba/smear-cursor.nvim",
 		enabled = not vim.g.neovide,
 		opts = {},
-		lazy = false,
 	},
 }
