@@ -4,18 +4,14 @@ return {
 		"goolord/alpha-nvim",
 		opts = function(_, opts)
 			opts.section.header.val = {
-				"    ███    ██ ██    ██ ██ ███    ███",
-				"    ████   ██ ██    ██ ██ ████  ████",
-				"    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-				"    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-				"    ██   ████   ████   ██ ██      ██",
+				"███    ██ ██    ██ ██ ███    ███",
+				"████   ██ ██    ██ ██ ████  ████",
+				"██ ██  ██ ██    ██ ██ ██ ████ ██",
+				"██  ██ ██  ██  ██  ██ ██  ██  ██",
+				"██   ████   ████   ██ ██      ██",
 			}
 			return opts
 		end,
-	},
-	{
-		"jasonccox/vim-wayland-clipboard",
-		lazy = false,
 	},
 	{
 		"loctvl842/monokai-pro.nvim",
@@ -39,19 +35,6 @@ return {
 		"EddyBer16/pseint.vim",
 		ft = { "pseint" },
 	},
-	-- {
-	-- 	"sphamba/smear-cursor.nvim",
-	-- 	opts = {},
-	-- },
-	-- {
-	-- 	"iamcco/markdown-preview.nvim",
-	-- 	cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-	-- 	build = "cd app && npm install",
-	-- 	init = function()
-	-- 		vim.g.mkdp_filetypes = { "markdown" }
-	-- 	end,
-	-- 	ft = { "markdown" },
-	-- },
 	{
 		"akinsho/toggleterm.nvim",
 		version = "*",
@@ -59,5 +42,17 @@ return {
 			autochdir = true,
 			direction = "float",
 		},
+	},
+
+	{
+		"jasonccox/vim-wayland-clipboard",
+		enabled = require("jit").os == "Linux" and os.getenv("XDG_SESSION_TYPE") == "wayland",
+		lazy = false,
+	},
+	{
+		"sphamba/smear-cursor.nvim",
+		enabled = not vim.g.neovide,
+		opts = {},
+		lazy = false,
 	},
 }
