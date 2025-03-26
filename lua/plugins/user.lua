@@ -53,4 +53,28 @@ return {
 		enabled = not vim.g.neovide,
 		opts = {},
 	},
+	{
+		"RaafatTurki/hex.nvim",
+		opts = {},
+	},
+	{
+		"ray-x/go.nvim",
+		dependencies = { -- optional packages
+			"ray-x/guihua.lua",
+			"neovim/nvim-lspconfig",
+			"nvim-treesitter/nvim-treesitter",
+		},
+		opts = {},
+		event = { "CmdlineEnter" },
+		ft = { "go", "gomod" },
+		build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
+	},
+	{
+		"mtoohey31/cmp-fish",
+		ft = "fish",
+	},
+	{
+		"Snikimonkd/cmp-go-pkgs",
+		ft = "go",
+	},
 }

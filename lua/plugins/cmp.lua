@@ -1,33 +1,19 @@
-local function setup_cmp_source(source_name, additional_config)
-	local cmp = require("cmp")
-
-	local config = cmp.get_config()
-	table.insert(config.sources, { name = source_name })
-
-	if additional_config then
-		for k, v in pairs(additional_config) do
-			config[k] = v
-		end
-	end
-
-	cmp.setup(config)
-end
-
 return {
-	{
+	"hrsh7th/nvim-cmp",
+	dependencies = {
 		"mtoohey31/cmp-fish",
-		ft = "fish",
-		config = function()
-			setup_cmp_source("fish")
-		end,
-	},
-	{
 		"Snikimonkd/cmp-go-pkgs",
-		ft = "go",
-		config = function()
-			setup_cmp_source("go_pkgs", {
-				matching = { disallow_symbol_nonprefix_matching = false },
-			})
-		end,
 	},
+
+	opts = function(_, opts)
+		local cmp = require("cmp")
+		opts.sources = cmp.config.sources({
+			{ name = "nvim_lsp", priority = 1000 },
+			{ name = "go_pkgs", priority = 950 },
+			{ name = "fish", priority = 950 },
+			{ name = "luasnip", priority = 900 },
+			{ name = "buffer", priority = 800 },
+			{ name = "path", priority = 750 },
+		})
+	end,
 }
