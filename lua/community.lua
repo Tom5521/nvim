@@ -3,20 +3,19 @@ return {
 
   -- INFO: LAUNGUAGE PACKS
   { import = "astrocommunity.pack.lua" },
-  -- { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.hyprlang" },
-  -- { import = "astrocommunity.pack.html-css" },
+  { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.just" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.markdown" },
-  -- { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.bash" },
-  { import = "astrocommunity.recipes.neovide" },
-  -- { import = "astrocommunity.pack.sql" },
-  -- { import = "astrocommunity.pack.java" },
+  { import = "astrocommunity.pack.sql" },
+  { import = "astrocommunity.pack.java" },
 
   --INFO: COLORSHEMES
   { import = "astrocommunity.colorscheme.monokai-pro-nvim" },
@@ -29,8 +28,6 @@ return {
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.fugit2-nvim" },
 
-  --INFO: INDENT
-  { import = "astrocommunity.indent.indent-rainbowline" },
   --INFO: MEDIA
   { import = "astrocommunity.media.presence-nvim" },
   { import = "astrocommunity.media.vim-wakatime" },
@@ -42,4 +39,5 @@ return {
   -- { import = "astrocommunity.bars-and-lines.bufferline-nvim" },
   --INFO: RECIPES
   { import = "astrocommunity.recipes.telescope-nvchad-theme" },
+  { import = "astrocommunity.recipes.neovide" },
 }
